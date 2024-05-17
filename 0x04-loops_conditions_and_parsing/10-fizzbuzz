@@ -16,5 +16,5 @@ do
     else
         echo "$c"
     fi
-    let c+=1
+    ((c++))
 done
