@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#check arguments
+#check arguments passed to script
 
 if [ $# -lt 4 ]
 then
