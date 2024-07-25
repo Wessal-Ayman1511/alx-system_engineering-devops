@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Install nginx on web server;
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow "Nginx HTTP"
+echo "Hello World!" > sudo /var/www/html/index.nginx-debian.html
+str="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.google.com permanent;"
+
+sudo sed -i "s/server_name _;/$str/" /etc/nginx/sites-enabled/default
+sudo service nginx start
