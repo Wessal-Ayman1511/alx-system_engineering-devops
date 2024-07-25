@@ -9,4 +9,5 @@ echo 'Hello World!' >  /var/www/html/index.html
 
 #testing  configuration
 #sudo nginx -t
-sudo service nginx reload
+#sudo service nginx reload
+sudo service nginx start
