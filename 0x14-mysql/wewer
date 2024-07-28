@@ -1,0 +1,53 @@
+mysql-bin.000001 |      154 | tyrell_corp
+
+ mysql-bin.000003 |      154 | tyrell_corp 
+
+CHANGE MASTER TO
+  MASTER_HOST='54.236.56.171',
+  MASTER_USER='replica_user',
+  MASTER_PASSWORD='replica_user',
+  MASTER_LOG_FILE='mysql-bin.000004',
+  MASTER_LOG_POS=154;
+
++------------------+----------+--------------+------------------+-------------------+
+| File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
++------------------+----------+--------------+------------------+-------------------+
+| mysql-bin.000005 |      749 | tyrell_corp  |                  |                   |
++------------------+----------+--------------+------------------+-------------------+
+CHANGE MASTER TO MASTER_HOST='54.236.56.171', MASTER_USER='replica_user', MASTER_PASSWORD='slave', MASTER_LOG_FILE='mysql-bin.000006', MASTER_LOG_POS=154;
+ALTER USER 'replica_user'@'%' IDENTIFIED BY 'slave';
+
++------------------+----------+--------------+------------------+-------------------+
+| File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
++------------------+----------+--------------+------------------+-------------------+
+| mysql-bin.000006 |      154 | tyrell_corp  |                  |                   |
++------------------+----------+--------------+------------------+-------------------+
+GRANT REPLICATION SLAVE ON *.* TO 'replica_user'@'%';
+
+---------------------------
++------------------+----------+--------------+------------------+-------------------+
+| File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
++------------------+----------+--------------+------------------+-------------------+
+| mysql-bin.000008 |      510 | tyrell_corp  |                  |                   |
++------------------+----------+--------------+------------------+-------------------+
+sudo mysqldump -u root tyrell_corp  > tyrell_corp .sql
+
+scp tyrell_corp.sql ubuntu@52.90.14.249:/tmp/
+
+sudo mysql tyrell_corp < /tmp/tyrell_corp.sql
+
+CHANGE MASTER TO
+SOURCE_HOST='54.236.56.171',
+SOURCE_USER='replica_user',
+SOURCE_PASSWORD='slave',
+SOURCE_LOG_FILE='mysql-bin.000008',
+SOURCE_LOG_POS=510;
+
+CHANGE MASTER TO
+  MASTER_HOST='54.236.56.171',
+  MASTER_USER='replica_user',
+  MASTER_PASSWORD='slave',
+  MASTER_LOG_FILE='mysql-bin.000008',
+  MASTER_LOG_POS=510;
+
+SHOW GRANTS FOR 'eplica_user'@'%';
