@@ -25,10 +25,8 @@ if __name__ == "__main__":
                 dic['username'] = i['username']
                 list.append(dic)
         final_dic[i['id']] = list
-        
-    print(final_dic)
 
-    #json_serialization = json.dumps(dict)
+    json_serialization = json.dumps(final_dic)
 
-    # with open(argv[1] + ".json", 'w') as file:
-    #     file.write(json_serialization)
+    with open('todo_all_employees.json', 'w') as file:
+        file.write(json_serialization)
