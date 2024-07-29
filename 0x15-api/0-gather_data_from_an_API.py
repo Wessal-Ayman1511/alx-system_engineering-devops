@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-#this script to retrive data from ipa
+"""
+Python script that, using a REST API, for a given employee ID,
+returns information about his/her TODO list progress.
+"""
 from requests import get
 from sys import argv
 
