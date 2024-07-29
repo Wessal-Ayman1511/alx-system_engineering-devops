@@ -23,7 +23,7 @@ if __name__ == "__main__":
                 dic['task'] = j['title']
                 dic['completed'] = j['completed']
                 dic['username'] = i['username']
-            list.append(dic)
+                list.append(dic)
         final_dic[i['id']] = list
         
     print(final_dic)
