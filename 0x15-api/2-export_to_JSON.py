@@ -19,7 +19,7 @@ if __name__ == "__main__":
             user_name = i['username']
             user_id = i['id']
 
-    list = []  
+    list = []
 
     for i in to_do_response:
 
@@ -32,6 +32,6 @@ if __name__ == "__main__":
     dict = {}
     dict[user_id] = list
     json_serialization = json.dumps(dict)
-    
-    with open(argv[1]+ ".json", 'w') as file:
+
+    with open(argv[1] + ".json", 'w') as file:
         file.write(json_serialization)
