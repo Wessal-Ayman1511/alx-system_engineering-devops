@@ -13,7 +13,7 @@ if __name__ == "__main__":
     to_do_response = to_do.json()
     users = get('https://jsonplaceholder.typicode.com/users/')
     users_response = users.json()
-    
+
     final_dic = {}
     for i in users_response:
         list = []
