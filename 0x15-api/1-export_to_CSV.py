@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 """
-cvs file formating
+Python script that exports data in the CSV format
 """
+
 
 from requests import get
 from sys import argv
