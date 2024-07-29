@@ -9,6 +9,7 @@ from requests import get
 from sys import argv
 import csv
 
+
 if __name__ == "__main__":
     to_do = get('https://jsonplaceholder.typicode.com/todos/')
     to_do_response = to_do.json()
