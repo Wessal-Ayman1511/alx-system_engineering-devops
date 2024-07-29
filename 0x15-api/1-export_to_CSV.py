@@ -20,11 +20,12 @@ if __name__ == "__main__":
         writ = csv.writer(file, quoting=csv.QUOTE_ALL)
 
         for i in to_do_response:
+
+            row = []
             if i['userId'] == int(argv[1]):
-                row = [
-                    i['userId'],
-                    employee,
-                    i['completed'],
-                    i['title']
-                ]
+                row.append(i['userId'])
+                row.append(employee)
+                row.append(i['completed'])
+                row.append(i['title'])
+
                 writ.writerow(row)
