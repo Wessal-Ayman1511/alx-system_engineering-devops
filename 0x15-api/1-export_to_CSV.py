@@ -14,12 +14,9 @@ if __name__ == "__main__":
     to_do_response = to_do.json()
     users = get('https://jsonplaceholder.typicode.com/users/')
     users_response = users.json()
-
-
 for i in users_response:
     if i.get('id') == int(argv[1]):
         employee = i.get('name')
-
 with open(argv[1] + '.csv', 'w', newline='') as file:
     writ = csv.writer(file, quoting=csv.QUOTE_ALL)
 
