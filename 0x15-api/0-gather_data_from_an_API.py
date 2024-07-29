@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#this script to retrive data from ipa
 from requests import get
 from sys import argv
 
