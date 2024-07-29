@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+cvs file formating
+"""
 
 from requests import get
 from sys import argv
