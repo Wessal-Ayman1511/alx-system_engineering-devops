@@ -11,7 +11,7 @@ def top_ten(subreddit):
     """
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     headers = {
-        "User-Agent": "windows:myredditbot:v1.0.0 (by /u/yourusername)"
+        "User-Agent": "linux:myredditbot:v1.0.0 (by /u/wassola)"
     }
     params = {"limit": 10}
     try:
