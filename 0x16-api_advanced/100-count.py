@@ -45,8 +45,9 @@ def count_words(subreddit, word_list, word_count={}, after=None):
                 return count_words(subreddit, word_list, word_count, after)
             else:
                 # Sort the dictionary and print results
-                sorted_words = sorted(word_count.items\
-                    (), key=lambda item: (-item[1], item[0]))
+                sorted_words = sorted(
+                    word_count.items(), key=lambda item: (-item[1], item[0])
+                    )
                 for word, count in sorted_words:
                     if count > 0:
                         print(f"{word}: {count}")
