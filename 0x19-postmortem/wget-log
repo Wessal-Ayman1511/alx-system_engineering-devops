@@ -1,0 +1,6 @@
+--2024-08-17 16:32:10--  https://www.digitalocean.com/cdn-cgi/image/quality=75,width=1920/https://www.digitalocean.com/api/static-content/v1/images?src=https%3A%2F%2Fcommunity-cdn-digitalocean-com.global.ssl.fastly.net%2FVPAEEbMkqWM36LqdJ91iTyzz
+Resolving www.digitalocean.com (www.digitalocean.com)... 104.19.173.68, 104.19.174.68, 2606:4700::6813:ae44, ...
+Connecting to www.digitalocean.com (www.digitalocean.com)|104.19.173.68|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2024-08-17 16:32:11 ERROR 404: Not Found.
+

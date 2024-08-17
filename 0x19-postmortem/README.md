@@ -11,6 +11,8 @@
 - **Impact:** The personal project website experienced intermittent downtime, causing errors and slow load times for approximately 50% of visitors.
 - **Root Cause:** Incorrect configuration of NGINX server settings.
 
+![NGINX Issue Overview](./wget-log)  
+
 ---
 
 ## Timeline
