@@ -64,4 +64,4 @@
 
 ---
 
-But of course, it will never occur again, because we're programmers, and we never make errors! 😉
+By following these measures, we aim to prevent similar issues in the future and enhance the reliability of personal projects.
